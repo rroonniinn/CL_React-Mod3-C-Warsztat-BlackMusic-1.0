@@ -1,0 +1,189 @@
+$fontFamily: 'Nunito Sans', sans-serif;
+$colorPrimary: #00ffe4;
+
+// $fontB: font-family: 'Poiret One', cursive;
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    // border: 1px solid red;
+
+}
+
+/* ************************************************************** */
+/* ******** Stylowanie layutu */
+/* ************************************************************** */
+
+body {
+    margin: 0;
+    font-family: $fontFamily;
+    
+}
+
+.main-hero {
+    $color1 : rgba(black, 0.8);
+    $color2 : rgba(black, 0.9);
+
+    height: 100vh;
+    background-image: 
+        linear-gradient(-45deg, $color1 0%, $color1 25%, $color2 25%, $color2 50%, $color1 50%, $color1 75%, $color2 75%, $color2 100%),
+        url(../images/main-banner.jpg);
+    background-size: 5px 5px, cover; // pierwsza część (przed przecinkiem) dotyczy pierwszej linii background-image - linear-gradient
+    background-position: center bottom;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+}
+
+/* ************************************************************** */
+/* ******** Main header */
+/* ************************************************************** */
+
+.main-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-logo {
+    padding: 30px 10px;
+    display: inline-block;
+}
+
+.main-nav {
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        };
+
+    li {
+        display: inline-block;
+        };
+
+    a {
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+        padding: 0 15px;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s all;
+
+        &:hover {
+            color: $colorPrimary;
+            }
+
+        &:before {
+            content: '';
+            height: 1px;
+            width: 0;
+            background: $colorPrimary;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            transition: 0.5s 0.2s all;
+            }
+        &:hover:before {
+            width: 100%;
+
+        }
+
+    }
+
+}
+
+/* ************************************************************** */
+/* ******** Main Banner */
+/* ************************************************************** */
+
+
+.main-banner {
+    flex-grow: 1;
+    // border: 1px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.main-banner {
+    .main-banner-title {
+        font-size: 19px;
+        color: rgba(white, 0.35);
+    }
+    .main-banner-text {
+
+        font-size: 19px;
+        color: rgba(white, 0.35);
+        text-align: center;
+        margin: 65px 0;
+        max-width: 850px;
+
+    }
+    .main-banner-btn {
+        font-size: 15px;
+        color: rgba(white, 0.85);
+        display: inline-block;
+        border: 1px solid rgba(white, 0.45);
+        border-radius: 40px;
+        padding: 20px 55px;
+        background-color: rgba(white, 0.1);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s all;
+        
+        &:hover {
+            background-color: rgba($colorPrimary, 0.6);
+            border: 1px solid rgba($colorPrimary, 0.9);
+            color: black;
+        }  
+
+    }
+}
+
+
+/* ************************************************************** */
+/* ******** Super napis - kod od Marcina */
+/* ************************************************************** */
+
+.main-banner-title svg {
+    min-width:800px;
+}
+
+.main-banner-title .st0 {fill:none; fill-opacity:0; stroke:#000000; stroke-miterlimit:10; stroke-dasharray:703,0;}
+.main-banner-title .st1 {stroke-dasharray: 270; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:270; animation:animMainBannerStroke 0.5s 0s   1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st2 {stroke-dasharray: 310; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:310; animation:animMainBannerStroke 0.5s 0.3s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st3 {stroke-dasharray: 375; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:375; animation:animMainBannerStroke 0.5s 0.6s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st4 {stroke-dasharray: 330; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:330; animation:animMainBannerStroke 0.5s 0.9s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st5 {stroke-dasharray: 260; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:260; animation:animMainBannerStroke 0.5s 1.2s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st6 {stroke-dasharray: 465; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:465; animation:animMainBannerStroke 0.5s 1.5s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st7 {stroke-dasharray: 330; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:330; animation:animMainBannerStroke 0.5s 1.8s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st8 {stroke-dasharray: 705; stroke: #ffffff; fill: #ffffff; stroke-dashoffset:705; animation:animMainBannerStroke 0.5s 2.1s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st9 {stroke-dasharray: 400; stroke: #ffffff; fill: #ffffff; stroke-dashoffset:400; animation:animMainBannerStroke 0.5s 2.4s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st10 {stroke-dasharray: 360;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:360; animation:animMainBannerStroke 0.5s 2.7s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st11 {stroke-dasharray: 180;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:180; animation:animMainBannerStroke 0.5s 3s   1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+.main-banner-title .st12 {stroke-dasharray: 370;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:370; animation:animMainBannerStroke 0.5s 3.3s 1 linear forwards, animMainBannerTitleFill 1s 4s 1 linear forwards;}
+
+@keyframes animMainBannerStroke {
+    100% {stroke-dashoffset:0;}
+}
+@keyframes animMainBannerTitleFill {
+    100% {fill-opacity:0.8;}
+}
+
+
